@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GameHub - Login</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .auth-box {
+      max-width: 420px;
+      margin: 70px auto;
+      padding: 30px;
+      background: #151620;
+      border: 1px solid #292a38;
+      border-radius: 12px;
+    }
+
+    .auth-box h1 { margin-bottom: 10px; }
+
+    .auth-box label {
+      display: block;
+      margin-top: 16px;
+    }
+
+    .auth-box input {
+      width: 100%;
+      padding: 12px;
+      margin-top: 6px;
+      background: #0b0c12;
+      color: white;
+      border: 1px solid #393a49;
+      border-radius: 6px;
+    }
+
+    .auth-box button { width: 100%; margin-top: 22px; }
+    .auth-box p { margin-top: 16px; color: #b7b7c6; }
+    .auth-box a { color: #ad96ff; }
+  </style>
+</head>
+<body>
+  <header class="navbar">
+    <a href="/" class="logo">GAME<span>HUB</span></a>
+    <a href="/">Home</a>
+  </header>
+
+  <main class="auth-box">
+    <h1 id="heading">Welcome Back</h1>
+    <p id="description">Log in to your account.</p>
+
+    <form id="authForm">
+      <div id="usernameField" hidden>
+        <label for="username">Username</label>
+        <input id="username" name="username"
+               minlength="3" maxlength="30">
+      </div>
+
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" required>
+
+      <label for="password">Password</label>
+      <input id="password" name="password" type="password"
+             minlength="8" required>
+
+      <button id="submitButton" type="submit">Login</button>
+    </form>
+
+    <p id="message" role="status"></p>
+    <p>
+      <span id="switchText">Don't have an account?</span>
+      <a href="#" id="switchMode">Register</a>
+    </p>
+  </main>
+
+  <script src="login.js"></script>
+</body>
+</html>
